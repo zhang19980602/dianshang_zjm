@@ -9,6 +9,7 @@ import com.example.zjm.service.DSShuXingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -31,6 +32,8 @@ public class DSShuXingServiceImpl implements DSShuXingService {
 
     @Override
     public void add(DSShuXing dsShuXing) {
+        dsShuXing.setCreateDate(new Date());
+        dsShuXing.setIsDel(0);
         dsShuXingDao.add(dsShuXing);
     }
 }
