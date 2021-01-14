@@ -4,6 +4,7 @@ import com.example.zjm.model.po.DSShuXing;
 import com.example.zjm.model.vo.PageParam;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 import java.util.List;
 
@@ -21,4 +22,7 @@ public interface DSShuXingDao {
     void add(DSShuXing dsShuXing);
     @Select("select * from dianshang_shuxing where id = #{id}")
     DSShuXing queryById(Integer id);
+     @Update("update dianshang_shuxing set name = #{name}, nameCH=#{nameCH},typeId=#{typeId}" +
+             ",type=#{type},isSKU=#{isSKU},updateDate = #{updateDate},author=#{author} where id =#{id}")
+    void update(DSShuXing dsShuXing);
 }

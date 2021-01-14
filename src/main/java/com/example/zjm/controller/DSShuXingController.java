@@ -37,4 +37,10 @@ public class DSShuXingController {
         return ReponseData.success(dsShuXing);
     }
 
+    @PostMapping("update")
+    public ReponseData update(DSShuXing dsShuXing){
+        dsShuXingService.update(dsShuXing);
+        return ReponseData.success(null);
+    }
+
 }

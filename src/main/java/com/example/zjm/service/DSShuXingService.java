@@ -10,4 +10,6 @@ public interface DSShuXingService {
     void add(DSShuXing dsShuXing);
 
     DSShuXing queryById(Integer id);
+
+    void update(DSShuXing dsShuXing);
 }

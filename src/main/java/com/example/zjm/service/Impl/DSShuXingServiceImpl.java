@@ -42,4 +42,10 @@ public class DSShuXingServiceImpl implements DSShuXingService {
         DSShuXing dsShuXing=dsShuXingDao.queryById(id);
         return dsShuXing;
     }
+
+    @Override
+    public void update(DSShuXing dsShuXing) {
+        dsShuXing.setUpdateDate(new Date());
+        dsShuXingDao.update(dsShuXing);
+    }
 }
