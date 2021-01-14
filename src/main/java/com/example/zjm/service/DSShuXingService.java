@@ -6,4 +6,6 @@ import com.example.zjm.model.vo.PageResult;
 
 public interface DSShuXingService {
     PageResult<DSShuXing> queryAll(PageParam params);
+
+    void add(DSShuXing dsShuXing);
 }

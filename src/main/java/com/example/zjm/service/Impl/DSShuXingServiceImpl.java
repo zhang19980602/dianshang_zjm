@@ -28,4 +28,9 @@ public class DSShuXingServiceImpl implements DSShuXingService {
         PageResult<DSShuXing> rs=new PageResult<>(count,cars);
         return rs;
     }
+
+    @Override
+    public void add(DSShuXing dsShuXing) {
+        dsShuXingDao.add(dsShuXing);
+    }
 }

@@ -2,6 +2,7 @@ package com.example.zjm.dao;
 
 import com.example.zjm.model.po.DSShuXing;
 import com.example.zjm.model.vo.PageParam;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
@@ -15,4 +16,7 @@ public interface DSShuXingDao {
             " <if test='name != null and name != &quot;&quot;'>  and name  like #{name}</if>" +
             "limit #{startIndex},#{limit} </script>")
     List<DSShuXing> queryByPage(PageParam params);
+    @Insert("insert into dianshang_shuxing (name,nameCH,typeId,type,isSKU,isDel,createDate,author) value " +
+            "                  (#{name},#{nameCH},#{typeId},#{type},#{isSKU},#{isDel},#{createDate},#{author})")
+    void add(DSShuXing dsShuXing);
 }
