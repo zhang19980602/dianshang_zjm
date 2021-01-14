@@ -7,13 +7,20 @@ import org.springframework.format.annotation.DateTimeFormat;
 import java.util.Date;
 
 //分页的默认参数
-public class PageParam extends DSPinPai {
+public class PageParam {
+    private String name;
     private  Integer page;
     private  Integer limit;
     private Integer startIndex;
 
 
+    public String getName() {
+        return name;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public Integer getPage() {
         return page;
