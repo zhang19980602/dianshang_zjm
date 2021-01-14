@@ -8,4 +8,6 @@ public interface DSShuXingService {
     PageResult<DSShuXing> queryAll(PageParam params);
 
     void add(DSShuXing dsShuXing);
+
+    DSShuXing queryById(Integer id);
 }

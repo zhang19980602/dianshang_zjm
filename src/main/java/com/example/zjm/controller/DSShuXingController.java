@@ -30,5 +30,11 @@ public class DSShuXingController {
         return ReponseData.success(null);
     }
 
+    @GetMapping("queryById")
+    public ReponseData queryById(Integer id){
+
+        DSShuXing dsShuXing=dsShuXingService.queryById(id);
+        return ReponseData.success(dsShuXing);
+    }
 
 }

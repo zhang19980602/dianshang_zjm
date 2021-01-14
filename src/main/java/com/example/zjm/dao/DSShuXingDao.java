@@ -19,4 +19,6 @@ public interface DSShuXingDao {
     @Insert("insert into dianshang_shuxing (name,nameCH,typeId,type,isSKU,isDel,createDate,author) value " +
             "                  (#{name},#{nameCH},#{typeId},#{type},#{isSKU},#{isDel},#{createDate},#{author})")
     void add(DSShuXing dsShuXing);
+    @Select("select * from dianshang_shuxing where id = #{id}")
+    DSShuXing queryById(Integer id);
 }

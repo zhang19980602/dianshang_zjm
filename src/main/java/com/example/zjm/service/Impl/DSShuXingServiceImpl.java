@@ -36,4 +36,10 @@ public class DSShuXingServiceImpl implements DSShuXingService {
         dsShuXing.setIsDel(0);
         dsShuXingDao.add(dsShuXing);
     }
+
+    @Override
+    public DSShuXing queryById(Integer id) {
+        DSShuXing dsShuXing=dsShuXingDao.queryById(id);
+        return dsShuXing;
+    }
 }
