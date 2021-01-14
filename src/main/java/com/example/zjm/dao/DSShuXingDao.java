@@ -25,4 +25,6 @@ public interface DSShuXingDao {
      @Update("update dianshang_shuxing set name = #{name}, nameCH=#{nameCH},typeId=#{typeId}" +
              ",type=#{type},isSKU=#{isSKU},updateDate = #{updateDate},author=#{author} where id =#{id}")
     void update(DSShuXing dsShuXing);
+    @Update("update dianshang_shuxing set isDel =#{isDel},updateDate=#{updateDate} where id=#{id}")
+    void delete(DSShuXing dsShuXing);
 }

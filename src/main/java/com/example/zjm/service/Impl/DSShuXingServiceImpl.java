@@ -48,4 +48,11 @@ public class DSShuXingServiceImpl implements DSShuXingService {
         dsShuXing.setUpdateDate(new Date());
         dsShuXingDao.update(dsShuXing);
     }
+
+    @Override
+    public void delete(DSShuXing dsShuXing) {
+        dsShuXing.setUpdateDate(new Date());
+        dsShuXing.setIsDel(1);
+        dsShuXingDao.delete(dsShuXing);
+    }
 }

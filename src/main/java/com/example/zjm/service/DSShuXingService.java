@@ -12,4 +12,6 @@ public interface DSShuXingService {
     DSShuXing queryById(Integer id);
 
     void update(DSShuXing dsShuXing);
+
+    void delete(DSShuXing dsShuXing);
 }

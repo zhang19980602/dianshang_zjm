@@ -43,4 +43,11 @@ public class DSShuXingController {
         return ReponseData.success(null);
     }
 
+    @PostMapping("delete")
+    public ReponseData delete(DSShuXing dsShuXing){
+
+        dsShuXingService.delete(dsShuXing);
+        return ReponseData.success(null);
+    }
+
 }
