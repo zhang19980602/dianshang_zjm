@@ -4,10 +4,7 @@ import com.example.zjm.model.po.DSShuXing_Value;
 import com.example.zjm.model.vo.ReponseData;
 import com.example.zjm.service.DSShuXing_ValueService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -24,5 +21,12 @@ public class DSShuXing_ValueController {
         List<DSShuXing_Value> list = dsShuXing_valueService.queryAll(pid);
         return ReponseData.success(list);
     }
+    @PostMapping("delete")
+    public ReponseData delete(Integer id)
+    {
+        dsShuXing_valueService.delete(id);
+        return ReponseData.success(null);
+    }
+
 
 }

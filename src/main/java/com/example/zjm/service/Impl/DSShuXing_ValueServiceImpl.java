@@ -18,4 +18,9 @@ public class DSShuXing_ValueServiceImpl implements DSShuXing_ValueService {
         List<DSShuXing_Value> list=dsShuXing_valueDao.queryAll(pid);
         return list;
     }
+
+    @Override
+    public void delete(Integer id) {
+        dsShuXing_valueDao.delete(id);
+    }
 }

@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface DSShuXing_ValueService {
     List<DSShuXing_Value> queryAll(Integer pid);
+
+    void delete(Integer id);
 }
