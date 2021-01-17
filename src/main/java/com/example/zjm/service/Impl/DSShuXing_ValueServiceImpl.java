@@ -29,4 +29,9 @@ public class DSShuXing_ValueServiceImpl implements DSShuXing_ValueService {
         DSShuXing_Value dsShuXing_value=dsShuXing_valueDao.queryById(id);
         return dsShuXing_value;
     }
+
+    @Override
+    public void add(DSShuXing_Value dsShuXing_value) {
+        dsShuXing_valueDao.add(dsShuXing_value);
+    }
 }

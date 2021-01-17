@@ -10,4 +10,6 @@ public interface DSShuXing_ValueService {
     void delete(Integer id);
 
     DSShuXing_Value queryById(Integer id);
+
+    void add(DSShuXing_Value dsShuXing_value);
 }

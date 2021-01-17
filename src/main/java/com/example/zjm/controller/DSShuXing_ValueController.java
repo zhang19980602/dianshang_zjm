@@ -34,5 +34,11 @@ public class DSShuXing_ValueController {
         return ReponseData.success(dsShuXing_value);
     }
 
+    @PostMapping("add")
+    public ReponseData add(DSShuXing_Value dsShuXing_value)
+    {
+        dsShuXing_valueService.add(dsShuXing_value);
+        return ReponseData.success(null);
+    }
 
 }
