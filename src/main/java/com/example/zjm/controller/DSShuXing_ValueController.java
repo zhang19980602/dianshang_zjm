@@ -27,6 +27,12 @@ public class DSShuXing_ValueController {
         dsShuXing_valueService.delete(id);
         return ReponseData.success(null);
     }
+    @GetMapping("queryById")
+    public ReponseData queryById(Integer id)
+    {
+        DSShuXing_Value dsShuXing_value= dsShuXing_valueService.queryById(id);
+        return ReponseData.success(dsShuXing_value);
+    }
 
 
 }

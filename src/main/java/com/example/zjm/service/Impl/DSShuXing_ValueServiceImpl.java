@@ -23,4 +23,10 @@ public class DSShuXing_ValueServiceImpl implements DSShuXing_ValueService {
     public void delete(Integer id) {
         dsShuXing_valueDao.delete(id);
     }
+
+    @Override
+    public DSShuXing_Value queryById(Integer id) {
+        DSShuXing_Value dsShuXing_value=dsShuXing_valueDao.queryById(id);
+        return dsShuXing_value;
+    }
 }

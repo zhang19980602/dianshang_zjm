@@ -8,4 +8,6 @@ public interface DSShuXing_ValueService {
     List<DSShuXing_Value> queryAll(Integer pid);
 
     void delete(Integer id);
+
+    DSShuXing_Value queryById(Integer id);
 }

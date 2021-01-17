@@ -12,4 +12,6 @@ public interface DSShuXing_ValueDao {
     List<DSShuXing_Value> queryAll(Integer pid);
     @Delete("delete from dianshang_shuxing_value where id = #{id}")
     void delete(Integer id);
+    @Select("select * from dianshang_shuxing_value where id=#{id}")
+    DSShuXing_Value queryById(Integer id);
 }
