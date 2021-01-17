@@ -10,13 +10,13 @@ import java.util.List;
 
 public interface DSShuXing_ValueDao {
 
-    @Select("select * from dianshang_shuxing_value where attId=#{pid}")
+    @Select("select * from dianshang_shuxing_value where attId=#{pid} and isDel=0")
     List<DSShuXing_Value> queryAll(Integer pid);
-    @Delete("delete from dianshang_shuxing_value where id = #{id}")
+    @Update("update dianshang_shuxing_value set isDel=1 where id=#{id}")
     void delete(Integer id);
     @Select("select * from dianshang_shuxing_value where id=#{id}")
     DSShuXing_Value queryById(Integer id);
-    @Insert("insert into dianshang_shuxing_value(value,valueCH,attId) value(#{value},#{valueCH},#{attId})")
+    @Insert("insert into dianshang_shuxing_value(value,valueCH,attId,isDel) value(#{value},#{valueCH},#{attId},#{isDel})")
     void add(DSShuXing_Value dsShuXing_value);
     @Update("update dianshang_shuxing_value set value=#{value},valueCH=#{valueCH} where id=#{id}")
     void update(DSShuXing_Value dsShuXing_value);
