@@ -12,4 +12,6 @@ public interface DSShuXing_ValueService {
     DSShuXing_Value queryById(Integer id);
 
     void add(DSShuXing_Value dsShuXing_value);
+
+    void update(DSShuXing_Value dsShuXing_value);
 }

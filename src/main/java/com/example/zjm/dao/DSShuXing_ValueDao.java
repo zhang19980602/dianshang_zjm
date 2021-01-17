@@ -4,6 +4,7 @@ import com.example.zjm.model.po.DSShuXing_Value;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 import java.util.List;
 
@@ -17,4 +18,6 @@ public interface DSShuXing_ValueDao {
     DSShuXing_Value queryById(Integer id);
     @Insert("insert into dianshang_shuxing_value(value,valueCH,attId) value(#{value},#{valueCH},#{attId})")
     void add(DSShuXing_Value dsShuXing_value);
+    @Update("update dianshang_shuxing_value set value=#{value},valueCH=#{valueCH} where id=#{id}")
+    void update(DSShuXing_Value dsShuXing_value);
 }

@@ -34,4 +34,9 @@ public class DSShuXing_ValueServiceImpl implements DSShuXing_ValueService {
     public void add(DSShuXing_Value dsShuXing_value) {
         dsShuXing_valueDao.add(dsShuXing_value);
     }
+
+    @Override
+    public void update(DSShuXing_Value dsShuXing_value) {
+        dsShuXing_valueDao.update(dsShuXing_value);
+    }
 }
