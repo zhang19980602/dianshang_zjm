@@ -9,6 +9,8 @@ import com.example.zjm.service.DSShuXingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @CrossOrigin
 @RequestMapping("api/shuxing")
 @RestController
@@ -48,6 +50,13 @@ public class DSShuXingController {
 
         dsShuXingService.delete(dsShuXing);
         return ReponseData.success(null);
+    }
+
+    @GetMapping("queryByTypeId")
+    public ReponseData queryByTypeId(Integer typeId){
+
+       List<DSShuXing> list=dsShuXingService.queryByTypeId(typeId);
+        return ReponseData.success(list);
     }
 
 }

@@ -55,4 +55,10 @@ public class DSShuXingServiceImpl implements DSShuXingService {
         dsShuXing.setIsDel(1);
         dsShuXingDao.delete(dsShuXing);
     }
+
+    @Override
+    public List<DSShuXing> queryByTypeId(Integer typeId) {
+        List<DSShuXing> list =dsShuXingDao.queryByTypeId(typeId);
+        return list;
+    }
 }

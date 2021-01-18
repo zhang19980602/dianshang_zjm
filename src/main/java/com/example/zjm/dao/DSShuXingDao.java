@@ -27,4 +27,8 @@ public interface DSShuXingDao {
     void update(DSShuXing dsShuXing);
     @Update("update dianshang_shuxing set isDel =#{isDel},updateDate=#{updateDate} where id=#{id}")
     void delete(DSShuXing dsShuXing);
+    @Select("<script>  select * from dianshang_shuxing where isDel =0" +
+             " and typeId = #{typeId}"+
+            "  </script>")
+    List<DSShuXing> queryByTypeId(Integer typeId);
 }
