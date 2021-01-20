@@ -20,4 +20,6 @@ public interface DSShuXing_ValueDao {
     void add(DSShuXing_Value dsShuXing_value);
     @Update("update dianshang_shuxing_value set value=#{value},valueCH=#{valueCH} where id=#{id}")
     void update(DSShuXing_Value dsShuXing_value);
+    @Select("select * from dianshang_shuxing_value")
+    List<DSShuXing_Value> queryAll1();
 }

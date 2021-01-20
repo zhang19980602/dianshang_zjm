@@ -14,4 +14,6 @@ public interface DSShuXing_ValueService {
     void add(DSShuXing_Value dsShuXing_value);
 
     void update(DSShuXing_Value dsShuXing_value);
+
+    List<DSShuXing_Value> queryAll1();
 }

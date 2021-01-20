@@ -34,6 +34,7 @@ public class DSShuXingServiceImpl implements DSShuXingService {
     public void add(DSShuXing dsShuXing) {
         dsShuXing.setCreateDate(new Date());
         dsShuXing.setIsDel(0);
+        dsShuXing.setAuthor("预言家");
         dsShuXingDao.add(dsShuXing);
     }
 

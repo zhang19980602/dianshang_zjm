@@ -39,4 +39,10 @@ public class DSShuXing_ValueServiceImpl implements DSShuXing_ValueService {
     public void update(DSShuXing_Value dsShuXing_value) {
         dsShuXing_valueDao.update(dsShuXing_value);
     }
+
+    @Override
+    public List<DSShuXing_Value> queryAll1() {
+        List<DSShuXing_Value> list=dsShuXing_valueDao.queryAll1();
+        return list;
+    }
 }

@@ -21,6 +21,13 @@ public class DSShuXing_ValueController {
         List<DSShuXing_Value> list = dsShuXing_valueService.queryAll(pid);
         return ReponseData.success(list);
     }
+
+    @GetMapping("queryAll1")
+    public ReponseData queryAll1()
+    {
+        List<DSShuXing_Value> list = dsShuXing_valueService.queryAll1();
+        return ReponseData.success(list);
+    }
     @PostMapping("delete")
     public ReponseData delete(Integer id)
     {

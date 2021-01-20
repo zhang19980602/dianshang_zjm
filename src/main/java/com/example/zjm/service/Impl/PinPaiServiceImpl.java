@@ -32,6 +32,7 @@ public class PinPaiServiceImpl implements PinPaiService {
     public void add(DSPinPai dsPinPai) {
         dsPinPai.setCreateDate(new Date());
         dsPinPai.setIsdel(0);
+        dsPinPai.setAuthor("预言家");
         pinPaiDao.add(dsPinPai);
     }
 
