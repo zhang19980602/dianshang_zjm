@@ -2,6 +2,7 @@ package com.example.zjm.controller;
 
 
 import com.example.zjm.model.po.DSShop;
+import com.example.zjm.model.po.DSShopValues;
 import com.example.zjm.model.vo.ReponseData;
 import com.example.zjm.service.DSShopService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,14 @@ public class DSShopController {
         dsShopService.add(dsShop);
         return ReponseData.success(null);
     }
+
+    @PostMapping("addvalue")
+    public ReponseData addvalue(DSShopValues dsShopValues){
+
+        dsShopService.addvalue(dsShopValues);
+        return ReponseData.success(null);
+    }
+
 
 
 }

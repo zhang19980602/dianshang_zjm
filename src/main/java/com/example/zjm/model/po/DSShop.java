@@ -31,6 +31,16 @@ public class DSShop {
 
     private String author;//
 
+    private String attrData;
+
+    public String getAttrData() {
+        return attrData;
+    }
+
+    public void setAttrData(String attrData) {
+        this.attrData = attrData;
+    }
+
     private int isDel;//  是否删除
 
     public Integer getId() {
