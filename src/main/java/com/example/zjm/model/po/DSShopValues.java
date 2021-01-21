@@ -51,4 +51,15 @@ public class DSShopValues {
     public void setPrice(Integer price) {
         this.price = price;
     }
+
+    @Override
+    public String toString() {
+        return "DSShopValues{" +
+                "id=" + id +
+                ", proId=" + proId +
+                ", attrData='" + attrData + '\'' +
+                ", storcks=" + storcks +
+                ", price=" + price +
+                '}';
+    }
 }

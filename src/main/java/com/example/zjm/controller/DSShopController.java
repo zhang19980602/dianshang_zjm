@@ -5,6 +5,7 @@ import com.example.zjm.model.po.DSShop;
 import com.example.zjm.model.po.DSShopValues;
 import com.example.zjm.model.vo.ReponseData;
 import com.example.zjm.service.DSShopService;
+import org.codehaus.jettison.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,10 +21,10 @@ public class DSShopController {
 
 
     @PostMapping("add")
-    public ReponseData add(DSShop dsShop){
+    public ReponseData add(DSShop dsShop) throws JSONException {
 
         dsShopService.add(dsShop);
-        return ReponseData.success(null);
+        return ReponseData.success(dsShop.getId());
     }
 
     @PostMapping("addvalue")
