@@ -1,7 +1,9 @@
 package com.example.zjm.dao;
 
 import com.example.zjm.model.po.DSShopValues;
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
@@ -18,4 +20,8 @@ public interface DSShopValuesDao {
             "</foreach>" +
             "</script>")
     void addPlxz(List<DSShopValues> list1);
+    @Select("select * from  dianshang_shopvalues where proId=#{typeId}")
+    List<DSShopValues> queryByTypeId(Integer typeId);
+    @Delete("delete from dianshang_shopvalues where proId=#{typeId}")
+    void delete(Integer typeId);
 }
